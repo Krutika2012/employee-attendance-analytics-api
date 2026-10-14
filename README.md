@@ -159,17 +159,17 @@ Environment variables already set by the process take precedence over values loa
 From the project root, with the virtual environment activated, execute:
 
 ```bash
-python -m uvicorn app.main:app --host 127.0.0.1 --port 8000
+python -m uvicorn app.main:app --host 127.0.0.1 --port 8002
 ```
 
 The API will be available at:
 
-`http://127.0.0.1:8000`
+`http://127.0.0.1:8002/docs`
 
 For development with automatic reload enabled, use:
 
 ```bash
-python -m uvicorn app.main:app --reload --port 8000
+python -m uvicorn app.main:app --reload --port 8002
 ```
 
 Keep the terminal open while using the API. Stop the server with `Ctrl+C`.
@@ -180,11 +180,11 @@ Once the server is running, use the following URLs.
 
 | Resource | URL |
 |---|---|
-| API base URL | http://127.0.0.1:8000 |
-| Health check | http://127.0.0.1:8000/health |
-| Swagger UI | http://127.0.0.1:8000/docs |
-| ReDoc documentation | http://127.0.0.1:8000/redoc |
-| OpenAPI schema | http://127.0.0.1:8000/openapi.json |
+| API base URL | http://127.0.0.1:8002 |
+| Health check | http://127.0.0.1:8002/health |
+| Swagger UI | http://127.0.0.1:8002/docs |
+| ReDoc documentation | http://127.0.0.1:8002/redoc |
+| OpenAPI schema | http://127.0.0.1:8002/openapi.json |
 
 ### Health Check
 
@@ -222,7 +222,7 @@ The following endpoint groups describe the API's intended functionality. Refer t
 
 You can test the endpoints through Swagger UI at:
 
-`http://127.0.0.1:8000/docs`
+`http://127.0.0.1:8002/docs`
 
 Recommended testing sequence:
 
@@ -280,7 +280,7 @@ python -m pip install -r requirements.txt
 Start the application on another available port, for example:
 
 ```bash
-python -m uvicorn app.main:app --port 8001
+python -m uvicorn app.main:app --port 8002
 ```
 
 Use the corresponding port when opening Swagger UI or the health-check URL.
